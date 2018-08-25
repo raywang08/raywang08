@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>3D魔方</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+        ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		.box {
+			position: relative;
+			margin: 150px auto;
+			width: 300px;
+			height: 300px;
+			font-size: 50px;
+			transform-style: preserve-3d;   /*设置3D效果*/
+			animation: rotate 10s linear infinite;/*动画样式*/
+		}
+		.box > div {
+			position: absolute;
+			width: 300px;
+			height: 300px;
+		}
+		li {
+			float: left;
+			margin: 5px;
+			width: 90px;
+			height: 90px;
+			text-align: center;
+			line-height: 90px;
+			border-radius: 20px;
+		}
+		.left li {
+			background-color: red;
+		}
+		.right li {
+			background-color: orange;
+		}
+		.top li {
+			background-color: yellow;
+		}
+		.bottom li {
+			background-color: green;
+		}
+		.before li {
+			background-color: blue;
+		}
+		.back li {
+			background-color: purple;
+		}
+		.left {
+			background-color: transparent;  /*背景透明*/
+			transform: rotateY(-90deg) translateZ(150px);
+		}
+		.right {
+			background-color: transparent;  
+			transform: rotateY(90deg) translateZ(150px);
+		}
+		.top {
+			background-color: transparent;
+			transform: rotateX(90deg) translateZ(150px);
+		}
+		.bottom {
+			background-color: transparent;
+			transform: rotateX(-90deg) translateZ(150px);
+		}
+		.before {
+			background-color: transparent;
+			transform: translateZ(150px);
+		}
+		.back {
+			background-color: transparent;  
+			transform: translateZ(-150px);
+		}
+		@keyframes rotate {
+			0% {
+				transform: rotateY(0deg) rotateY(0deg);
+			}
+			100% {
+				transform: rotateY(135deg) rotateX(45deg);
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="before">
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+				<li>6</li>
+				<li>7</li>
+				<li>8</li>
+				<li>9</li>
+			</ul>
+		</div>
+		<div class="back">
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+				<li>6</li>
+				<li>7</li>
+				<li>8</li>
+				<li>9</li>
+			</ul>
+		</div>
+		<div class="top">
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+				<li>6</li>
+				<li>7</li>
+				<li>8</li>
+				<li>9</li>
+			</ul>
+		</div>
+		<div class="bottom">
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+				<li>6</li>
+				<li>7</li>
+				<li>8</li>
+				<li>9</li>
+			</ul>
+		</div>
+		<div class="left">
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+				<li>6</li>
+				<li>7</li>
+				<li>8</li>
+				<li>9</li>
+			</ul>
+		</div>
+		<div class="right">
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+				<li>6</li>
+				<li>7</li>
+				<li>8</li>
+				<li>9</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
